@@ -2,6 +2,7 @@ package com.tomshidi.security.springmvc.init;
 
 import com.tomshidi.security.springmvc.config.ApplicationConfig;
 import com.tomshidi.security.springmvc.config.WebConfig;
+import com.tomshidi.security.springmvc.config.WebSecurityConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -19,7 +20,7 @@ public class SpringApplicationInitializer extends AbstractAnnotationConfigDispat
      */
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ApplicationConfig.class};
+        return new Class[]{ApplicationConfig.class, WebSecurityConfig.class};
     }
 
     /**
